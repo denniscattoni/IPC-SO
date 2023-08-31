@@ -243,7 +243,7 @@ After performing the *_unregister_* operation, the interface allows the user to 
 <br>
 <br>
 
-//TODO: fix the link to the line of code to the #define AUTO 1
+This is the #define AUTO 0:
 
 https://github.com/denniscattoni/IPC-SO/blob/e2ea7faf8d0880ee17831560d51379c165d3bbd8/user/USER_PROCESS.h#L31
 
