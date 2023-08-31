@@ -30,12 +30,12 @@ Alternatively, you can find the html version of the documentation after completi
 
 <br>
 
-To view the html page, you need to open the **index.html** file inside the **FdR-groupW/docs/html** folder
+To view the html page, you need to open the **index.html** file inside the **./IPC-SO/blob/master/doxygen/html/index.html** folder
 
 <br>
 
 ```
-cd LOCOSIM_DIR/robot_control/lab_exercises/FdR-groupW/docs/html
+cd ./IPC-SO/blob/master/doxygen/html/index.html
 xdg-open index.html
 ```
 
