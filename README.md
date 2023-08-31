@@ -13,7 +13,7 @@ The purpose of the project was to create a new mechanism for inter-process commu
 Open [**Requirements and Constraints**](https://github.com/denniscattoni/tmp_so/blob/main/utilities/requirements/LabOS2023_Progetto_desame.pdf) to access more details about the project's constraints and requirements.
 <br><br>
 
-Refer to the following report: [**aggiungi_pdf_link.pdf**](//mettilinkqui), for more details on the architecture, limitations, and structure of the project.
+Refer to the following report: [**Report_IPC-SO.pdf**](https://github.com/denniscattoni/IPC-SO/blob/master/utilities/report/Report_IPC-SO.pdf), for more details on the architecture, limitations, and structure of the project.
 <br><br>
 
 ![Alt text](https://github.com/denniscattoni/tmp_so/blob/main/utilities/img/ipc-so-high-wallpaper.png)
@@ -22,7 +22,7 @@ Refer to the following report: [**aggiungi_pdf_link.pdf**](//mettilinkqui), for 
 
 To provide better documentation, we have chosen to use the [**Doxygen tool**](https://www.doxygen.nl/).
 
-If you want to read the **Doxygen Documentation** for the code, check the generated PDF doc [here](https://github.com/SergioBrodesco/FdR-groupW/blob/master/docs/latex/refman.pdf).
+If you want to read the **Doxygen Documentation** for the code, check the generated PDF doc [ipc-so_doxygen.pdf](https://github.com/denniscattoni/IPC-SO/blob/master/doxygen/pdf/ipc-so_doxygen.pdf).
 
 <br>
 
