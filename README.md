@@ -103,6 +103,7 @@ It's time to download the repository, you should have a folder structure like th
 
 ```
 ./IPC-SO
+    |_ /doxygen
     |_ /utilities
     |_ /kernel
     |_ /user
@@ -244,7 +245,7 @@ After performing the *_unregister_* operation, the interface allows the user to 
 
 //TODO: fix the link to the line of code to the #define AUTO 1
 
-[!Permalink](https://github.com/mfocchi/locosim/blob/c4853e7ce4ade118cfe46be4b3f99b4b003eeabb/robot_urdf/hyq.srdf#L9)
+https://github.com/denniscattoni/IPC-SO/blob/e2ea7faf8d0880ee17831560d51379c165d3bbd8/user/USER_PROCESS.h#L31
 
 <br>
 <br>
