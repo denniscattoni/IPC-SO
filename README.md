@@ -26,14 +26,12 @@ If you want to read the **Doxygen Documentation** for the code, check the genera
 
 <br>
 
-To view the html page, you need to open the **index.html** file inside the:
-
-**./IPC-SO/blob/master/doxygen/html/index.html** folder
+To view the html you need to open the **index.html** file inside the **./IPC-SO/doxygen/html/index.html** folder.
 
 <br>
 
 ```
-cd ./IPC-SO/blob/master/doxygen/html/index.html
+cd ./IPC-SO/doxygen/html/index.html
 xdg-open index.html
 ```
 
