@@ -201,7 +201,7 @@ int mymenu(int reg){
 	    printf("\n1, unregister the current process");
 	    printf("\n2, list of avaiable processes");
 	    printf("\n3, write a message");
-	    printf("\n4, read a message"); 
+	    printf("\n4, read a message asynchronous mode"); 
 	    printf("\n5, read a message synchronous mode");
 	    printf("\n6, exit");
 	    printf("\nWhich operation do you want to do?  -->");
