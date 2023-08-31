@@ -1,0 +1,210 @@
+\doxysection{/home/dennis/\+Scrivania/doxy\+\_\+backend/user/user\+\_\+process.c File Reference}
+\hypertarget{user_2user__process_8c}{}\label{user_2user__process_8c}\index{/home/dennis/Scrivania/doxy\_backend/user/user\_process.c@{/home/dennis/Scrivania/doxy\_backend/user/user\_process.c}}
+{\ttfamily \#include "{}USER\+\_\+\+PROCESS.\+h"{}}\newline
+Include dependency graph for user\+\_\+process.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{user_2user__process_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\item 
+\mbox{\hyperlink{struct_message}{Message}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{user_2user__process_8c_aca47a6bece065be3625c6375ffb58231}{new\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Function that allows you to create a new message. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{user_2user__process_8c_a733f0d29f21aa6bb97cdfebf04024ba2}{my\+Random}} (int min, int max)
+\begin{DoxyCompactList}\small\item\em Function that chooses a random number between min and max. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{user_2user__process_8c_a802bbf86cd5f79821a4d847e6aff681b}{mymenu}} (int reg)
+\begin{DoxyCompactList}\small\item\em Function that prints the menu to choose the operation to carry out. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{user_2user__process_8c_ac4338ff0be70cb22b3d3f6fce6bc3daf}{reg\+\_\+unreg}} (int reg)
+\begin{DoxyCompactList}\small\item\em Function that allows the registration/delete of the process inside the kernel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{user_2user__process_8c_a302e52cb142c74f1aa27922946a56ccb}{process\+\_\+avaiable}} ()
+\begin{DoxyCompactList}\small\item\em Function that allows you to view all the processes registered within the kernel. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{user_2user__process_8c_a943b5b9a11c8f43e62df591876a3cef9}{check}} (int pid)
+\begin{DoxyCompactList}\small\item\em Function that checks if the entered pid is present in the list of processes registered in the kernel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{user_2user__process_8c_aaeba3938a41d7a3a40a8486759c64d74}{mes\+\_\+write}} ()
+\begin{DoxyCompactList}\small\item\em Function that sends the message to a recipient chosen by the user. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{user_2user__process_8c_ab4cb2d1a4a1ac5c32a64ba593f0a323a}{mes\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em Function used to read incoming messages. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{user_2user__process_8c_ad904e37250031819ab322a910af4bda6}{mes\+\_\+read\+\_\+sync}} ()
+\begin{DoxyCompactList}\small\item\em Function used to read incoming messages (synchronously) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user_2user__process_8c_aefbea395e139c5b1174d360b55b3c2fc}{myerr}} (int er)
+\begin{DoxyCompactList}\small\item\em Function that prints the description of the errors within the process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{user_2user__process_8c_a943b5b9a11c8f43e62df591876a3cef9}\label{user_2user__process_8c_a943b5b9a11c8f43e62df591876a3cef9} 
+\index{user\_process.c@{user\_process.c}!check@{check}}
+\index{check@{check}!user\_process.c@{user\_process.c}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool check (\begin{DoxyParamCaption}\item[{int}]{pid }\end{DoxyParamCaption})}
+
+
+
+Function that checks if the entered pid is present in the list of processes registered in the kernel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & Indicates the PID to be searched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If it finds the PID you are looking for 
+
+false If it does not find the PID you are looking for 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Use the \doxylink{user_2_u_s_e_r___p_r_o_c_e_s_s_8h_a302e52cb142c74f1aa27922946a56ccb}{process\+\_\+avaiable()} function to \doxylink{user_2_u_s_e_r___p_r_o_c_e_s_s_8h_a943b5b9a11c8f43e62df591876a3cef9}{check} process PIDs 
+\end{DoxySeeAlso}
+\Hypertarget{user_2user__process_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{user_2user__process_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{user\_process.c@{user\_process.c}!main@{main}}
+\index{main@{main}!user\_process.c@{user\_process.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{user_2user__process_8c_ab4cb2d1a4a1ac5c32a64ba593f0a323a}\label{user_2user__process_8c_ab4cb2d1a4a1ac5c32a64ba593f0a323a} 
+\index{user\_process.c@{user\_process.c}!mes\_read@{mes\_read}}
+\index{mes\_read@{mes\_read}!user\_process.c@{user\_process.c}}
+\doxysubsubsection{\texorpdfstring{mes\_read()}{mes\_read()}}
+{\footnotesize\ttfamily int mes\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function used to read incoming messages. 
+
+\begin{DoxyReturn}{Returns}
+0 -\/\texorpdfstring{$>$}{>} If there are no errors 
+
+7 -\/\texorpdfstring{$>$}{>} If the process fails to open the shared memory 
+\end{DoxyReturn}
+\Hypertarget{user_2user__process_8c_ad904e37250031819ab322a910af4bda6}\label{user_2user__process_8c_ad904e37250031819ab322a910af4bda6} 
+\index{user\_process.c@{user\_process.c}!mes\_read\_sync@{mes\_read\_sync}}
+\index{mes\_read\_sync@{mes\_read\_sync}!user\_process.c@{user\_process.c}}
+\doxysubsubsection{\texorpdfstring{mes\_read\_sync()}{mes\_read\_sync()}}
+{\footnotesize\ttfamily int mes\+\_\+read\+\_\+sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function used to read incoming messages (synchronously) 
+
+\begin{DoxyReturn}{Returns}
+0 -\/\texorpdfstring{$>$}{>} If there are no errors 
+
+8 -\/\texorpdfstring{$>$}{>} If the process fails to open the shared memory 
+
+9 -\/\texorpdfstring{$>$}{>} If the process fails the opening of synchronous processes 
+
+10 -\/\texorpdfstring{$>$}{>} If the process does not write the pid in the registration device 
+\end{DoxyReturn}
+\Hypertarget{user_2user__process_8c_aaeba3938a41d7a3a40a8486759c64d74}\label{user_2user__process_8c_aaeba3938a41d7a3a40a8486759c64d74} 
+\index{user\_process.c@{user\_process.c}!mes\_write@{mes\_write}}
+\index{mes\_write@{mes\_write}!user\_process.c@{user\_process.c}}
+\doxysubsubsection{\texorpdfstring{mes\_write()}{mes\_write()}}
+{\footnotesize\ttfamily int mes\+\_\+write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that sends the message to a recipient chosen by the user. 
+
+\begin{DoxyReturn}{Returns}
+0 -\/\texorpdfstring{$>$}{>} If there are no errors 
+
+5 -\/\texorpdfstring{$>$}{>} If the process fails to open the shared memory 
+
+6 -\/\texorpdfstring{$>$}{>} If the process fails to write to shared memory 
+\end{DoxyReturn}
+\Hypertarget{user_2user__process_8c_aefbea395e139c5b1174d360b55b3c2fc}\label{user_2user__process_8c_aefbea395e139c5b1174d360b55b3c2fc} 
+\index{user\_process.c@{user\_process.c}!myerr@{myerr}}
+\index{myerr@{myerr}!user\_process.c@{user\_process.c}}
+\doxysubsubsection{\texorpdfstring{myerr()}{myerr()}}
+{\footnotesize\ttfamily void myerr (\begin{DoxyParamCaption}\item[{int}]{er }\end{DoxyParamCaption})}
+
+
+
+Function that prints the description of the errors within the process. 
+
+\Hypertarget{user_2user__process_8c_a802bbf86cd5f79821a4d847e6aff681b}\label{user_2user__process_8c_a802bbf86cd5f79821a4d847e6aff681b} 
+\index{user\_process.c@{user\_process.c}!mymenu@{mymenu}}
+\index{mymenu@{mymenu}!user\_process.c@{user\_process.c}}
+\doxysubsubsection{\texorpdfstring{mymenu()}{mymenu()}}
+{\footnotesize\ttfamily int mymenu (\begin{DoxyParamCaption}\item[{int}]{reg }\end{DoxyParamCaption})}
+
+
+
+Function that prints the menu to choose the operation to carry out. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Indicates whether the process is already registered in the kernel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+op Returns the operation that was selected 
+\end{DoxyReturn}
+\Hypertarget{user_2user__process_8c_a733f0d29f21aa6bb97cdfebf04024ba2}\label{user_2user__process_8c_a733f0d29f21aa6bb97cdfebf04024ba2} 
+\index{user\_process.c@{user\_process.c}!myRandom@{myRandom}}
+\index{myRandom@{myRandom}!user\_process.c@{user\_process.c}}
+\doxysubsubsection{\texorpdfstring{myRandom()}{myRandom()}}
+{\footnotesize\ttfamily int my\+Random (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Function that chooses a random number between min and max. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Lower Limit \\
+\hline
+{\em max} & Upper Limit \\
+\hline
+\end{DoxyParams}
+\Hypertarget{user_2user__process_8c_aca47a6bece065be3625c6375ffb58231}\label{user_2user__process_8c_aca47a6bece065be3625c6375ffb58231} 
+\index{user\_process.c@{user\_process.c}!newMessage@{newMessage}}
+\index{newMessage@{newMessage}!user\_process.c@{user\_process.c}}
+\doxysubsubsection{\texorpdfstring{newMessage()}{newMessage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_message}{Message}} \texorpdfstring{$\ast$}{*} new\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that allows you to create a new message. 
+
+\begin{DoxyReturn}{Returns}
+tmp Returns the structure of the message with all fields 
+\end{DoxyReturn}
+\Hypertarget{user_2user__process_8c_a302e52cb142c74f1aa27922946a56ccb}\label{user_2user__process_8c_a302e52cb142c74f1aa27922946a56ccb} 
+\index{user\_process.c@{user\_process.c}!process\_avaiable@{process\_avaiable}}
+\index{process\_avaiable@{process\_avaiable}!user\_process.c@{user\_process.c}}
+\doxysubsubsection{\texorpdfstring{process\_avaiable()}{process\_avaiable()}}
+{\footnotesize\ttfamily int process\+\_\+avaiable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that allows you to view all the processes registered within the kernel. 
+
+\begin{DoxyReturn}{Returns}
+0 -\/\texorpdfstring{$>$}{>} If there are no errors 
+
+3 -\/\texorpdfstring{$>$}{>} If the process fails to open the shared memory 
+
+4 -\/\texorpdfstring{$>$}{>} If the process fails read the pid from the kernel 
+\end{DoxyReturn}
+\Hypertarget{user_2user__process_8c_ac4338ff0be70cb22b3d3f6fce6bc3daf}\label{user_2user__process_8c_ac4338ff0be70cb22b3d3f6fce6bc3daf} 
+\index{user\_process.c@{user\_process.c}!reg\_unreg@{reg\_unreg}}
+\index{reg\_unreg@{reg\_unreg}!user\_process.c@{user\_process.c}}
+\doxysubsubsection{\texorpdfstring{reg\_unreg()}{reg\_unreg()}}
+{\footnotesize\ttfamily int reg\+\_\+unreg (\begin{DoxyParamCaption}\item[{int}]{reg }\end{DoxyParamCaption})}
+
+
+
+Function that allows the registration/delete of the process inside the kernel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Indicates whether the process is already registered in the kernel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 -\/\texorpdfstring{$>$}{>} If there are no errors 
+
+1 -\/\texorpdfstring{$>$}{>} If the process fails the opening of the registration device 
+
+2 -\/\texorpdfstring{$>$}{>} If the process fails write to the registration device 
+\end{DoxyReturn}

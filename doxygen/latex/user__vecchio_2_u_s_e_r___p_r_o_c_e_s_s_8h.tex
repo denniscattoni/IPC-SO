@@ -1,0 +1,210 @@
+\doxysection{/home/dennis/\+Scrivania/doxy\+\_\+backend/user\+\_\+vecchio/\+USER\+\_\+\+PROCESS.h File Reference}
+\hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h}{}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h}\index{/home/dennis/Scrivania/doxy\_backend/user\_vecchio/USER\_PROCESS.h@{/home/dennis/Scrivania/doxy\_backend/user\_vecchio/USER\_PROCESS.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for USER\+\_\+\+PROCESS.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_message}{Message}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_message}{Message} structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a167bb2686bac1ba648cc7f12babd0648}{REGISTRATION\+\_\+\+DEVICE}}~"{}/dev/registration"{}
+\item 
+\#define \mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_aa2a48375cfcf300e2620d2e0971917c9}{SHARED\+\_\+\+MEM\+\_\+\+DEVICE}}~"{}/dev/shared\+\_\+memory"{}
+\item 
+\#define \mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_ade0edd9f2be2b290c7022d04263034b7}{SYNCHRONOUS\+\_\+\+DEVICE}}~"{}/dev/synchronous"{}
+\item 
+\#define \mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a6b20d41d6252e9871430c242cb1a56e7}{BUFFER\+\_\+\+SIZE}}~1024
+\item 
+\#define \mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a605675887efbf3a30d117c1b34df4d4a}{MAX\+\_\+\+REGISTRATIONS}}~100
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_message}{Message}} \mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a82fffef6ac8d8a796ab35b7d6a7a0dcb}{Message}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_message}{Message}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_aca47a6bece065be3625c6375ffb58231}{new\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Function that allows you to create a new message. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a733f0d29f21aa6bb97cdfebf04024ba2}{my\+Random}} (int min, int max)
+\begin{DoxyCompactList}\small\item\em Function that chooses a random number between min and max. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a125463cae524be2ca9eaa8ee1b87c6a8}{mymenu}} ()
+\item 
+int \mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a4590adac7e906e93cb13d50ebf1ac9cb}{reg\+\_\+unreg}} ()
+\item 
+int \mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a302e52cb142c74f1aa27922946a56ccb}{process\+\_\+avaiable}} ()
+\begin{DoxyCompactList}\small\item\em Function that allows you to view all the processes registered within the kernel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_aaeba3938a41d7a3a40a8486759c64d74}{mes\+\_\+write}} ()
+\begin{DoxyCompactList}\small\item\em Function that sends the message to a recipient chosen by the user. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_ab4cb2d1a4a1ac5c32a64ba593f0a323a}{mes\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em Function used to read incoming messages. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_ad904e37250031819ab322a910af4bda6}{mes\+\_\+read\+\_\+sync}} ()
+\begin{DoxyCompactList}\small\item\em Function used to read incoming messages (synchronously) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a6b20d41d6252e9871430c242cb1a56e7}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a6b20d41d6252e9871430c242cb1a56e7} 
+\index{USER\_PROCESS.h@{USER\_PROCESS.h}!BUFFER\_SIZE@{BUFFER\_SIZE}}
+\index{BUFFER\_SIZE@{BUFFER\_SIZE}!USER\_PROCESS.h@{USER\_PROCESS.h}}
+\doxysubsubsection{\texorpdfstring{BUFFER\_SIZE}{BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define BUFFER\+\_\+\+SIZE~1024}
+
+\Hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a605675887efbf3a30d117c1b34df4d4a}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a605675887efbf3a30d117c1b34df4d4a} 
+\index{USER\_PROCESS.h@{USER\_PROCESS.h}!MAX\_REGISTRATIONS@{MAX\_REGISTRATIONS}}
+\index{MAX\_REGISTRATIONS@{MAX\_REGISTRATIONS}!USER\_PROCESS.h@{USER\_PROCESS.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_REGISTRATIONS}{MAX\_REGISTRATIONS}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+REGISTRATIONS~100}
+
+\Hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a167bb2686bac1ba648cc7f12babd0648}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a167bb2686bac1ba648cc7f12babd0648} 
+\index{USER\_PROCESS.h@{USER\_PROCESS.h}!REGISTRATION\_DEVICE@{REGISTRATION\_DEVICE}}
+\index{REGISTRATION\_DEVICE@{REGISTRATION\_DEVICE}!USER\_PROCESS.h@{USER\_PROCESS.h}}
+\doxysubsubsection{\texorpdfstring{REGISTRATION\_DEVICE}{REGISTRATION\_DEVICE}}
+{\footnotesize\ttfamily \#define REGISTRATION\+\_\+\+DEVICE~"{}/dev/registration"{}}
+
+\Hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_aa2a48375cfcf300e2620d2e0971917c9}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_aa2a48375cfcf300e2620d2e0971917c9} 
+\index{USER\_PROCESS.h@{USER\_PROCESS.h}!SHARED\_MEM\_DEVICE@{SHARED\_MEM\_DEVICE}}
+\index{SHARED\_MEM\_DEVICE@{SHARED\_MEM\_DEVICE}!USER\_PROCESS.h@{USER\_PROCESS.h}}
+\doxysubsubsection{\texorpdfstring{SHARED\_MEM\_DEVICE}{SHARED\_MEM\_DEVICE}}
+{\footnotesize\ttfamily \#define SHARED\+\_\+\+MEM\+\_\+\+DEVICE~"{}/dev/shared\+\_\+memory"{}}
+
+\Hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_ade0edd9f2be2b290c7022d04263034b7}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_ade0edd9f2be2b290c7022d04263034b7} 
+\index{USER\_PROCESS.h@{USER\_PROCESS.h}!SYNCHRONOUS\_DEVICE@{SYNCHRONOUS\_DEVICE}}
+\index{SYNCHRONOUS\_DEVICE@{SYNCHRONOUS\_DEVICE}!USER\_PROCESS.h@{USER\_PROCESS.h}}
+\doxysubsubsection{\texorpdfstring{SYNCHRONOUS\_DEVICE}{SYNCHRONOUS\_DEVICE}}
+{\footnotesize\ttfamily \#define SYNCHRONOUS\+\_\+\+DEVICE~"{}/dev/synchronous"{}}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a82fffef6ac8d8a796ab35b7d6a7a0dcb}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a82fffef6ac8d8a796ab35b7d6a7a0dcb} 
+\index{USER\_PROCESS.h@{USER\_PROCESS.h}!Message@{Message}}
+\index{Message@{Message}!USER\_PROCESS.h@{USER\_PROCESS.h}}
+\doxysubsubsection{\texorpdfstring{Message}{Message}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_message}{Message}} \mbox{\hyperlink{struct_message}{Message}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_ab4cb2d1a4a1ac5c32a64ba593f0a323a}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_ab4cb2d1a4a1ac5c32a64ba593f0a323a} 
+\index{USER\_PROCESS.h@{USER\_PROCESS.h}!mes\_read@{mes\_read}}
+\index{mes\_read@{mes\_read}!USER\_PROCESS.h@{USER\_PROCESS.h}}
+\doxysubsubsection{\texorpdfstring{mes\_read()}{mes\_read()}}
+{\footnotesize\ttfamily int mes\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function used to read incoming messages. 
+
+\begin{DoxyReturn}{Returns}
+0 -\/\texorpdfstring{$>$}{>} If there are no errors 
+
+7 -\/\texorpdfstring{$>$}{>} If the process fails to open the shared memory 
+\end{DoxyReturn}
+\Hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_ad904e37250031819ab322a910af4bda6}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_ad904e37250031819ab322a910af4bda6} 
+\index{USER\_PROCESS.h@{USER\_PROCESS.h}!mes\_read\_sync@{mes\_read\_sync}}
+\index{mes\_read\_sync@{mes\_read\_sync}!USER\_PROCESS.h@{USER\_PROCESS.h}}
+\doxysubsubsection{\texorpdfstring{mes\_read\_sync()}{mes\_read\_sync()}}
+{\footnotesize\ttfamily int mes\+\_\+read\+\_\+sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function used to read incoming messages (synchronously) 
+
+\begin{DoxyReturn}{Returns}
+0 -\/\texorpdfstring{$>$}{>} If there are no errors 
+
+8 -\/\texorpdfstring{$>$}{>} If the process fails to open the shared memory 
+
+9 -\/\texorpdfstring{$>$}{>} If the process fails the opening of synchronous processes 
+
+10 -\/\texorpdfstring{$>$}{>} If the process does not write the pid in the registration device 
+\end{DoxyReturn}
+\Hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_aaeba3938a41d7a3a40a8486759c64d74}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_aaeba3938a41d7a3a40a8486759c64d74} 
+\index{USER\_PROCESS.h@{USER\_PROCESS.h}!mes\_write@{mes\_write}}
+\index{mes\_write@{mes\_write}!USER\_PROCESS.h@{USER\_PROCESS.h}}
+\doxysubsubsection{\texorpdfstring{mes\_write()}{mes\_write()}}
+{\footnotesize\ttfamily int mes\+\_\+write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that sends the message to a recipient chosen by the user. 
+
+\begin{DoxyReturn}{Returns}
+0 -\/\texorpdfstring{$>$}{>} If there are no errors 
+
+5 -\/\texorpdfstring{$>$}{>} If the process fails to open the shared memory 
+
+6 -\/\texorpdfstring{$>$}{>} If the process fails to write to shared memory 
+\end{DoxyReturn}
+\Hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a125463cae524be2ca9eaa8ee1b87c6a8}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a125463cae524be2ca9eaa8ee1b87c6a8} 
+\index{USER\_PROCESS.h@{USER\_PROCESS.h}!mymenu@{mymenu}}
+\index{mymenu@{mymenu}!USER\_PROCESS.h@{USER\_PROCESS.h}}
+\doxysubsubsection{\texorpdfstring{mymenu()}{mymenu()}}
+{\footnotesize\ttfamily int mymenu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a733f0d29f21aa6bb97cdfebf04024ba2}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a733f0d29f21aa6bb97cdfebf04024ba2} 
+\index{USER\_PROCESS.h@{USER\_PROCESS.h}!myRandom@{myRandom}}
+\index{myRandom@{myRandom}!USER\_PROCESS.h@{USER\_PROCESS.h}}
+\doxysubsubsection{\texorpdfstring{myRandom()}{myRandom()}}
+{\footnotesize\ttfamily int my\+Random (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Function that chooses a random number between min and max. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Lower Limit \\
+\hline
+{\em max} & Upper Limit \\
+\hline
+\end{DoxyParams}
+\Hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_aca47a6bece065be3625c6375ffb58231}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_aca47a6bece065be3625c6375ffb58231} 
+\index{USER\_PROCESS.h@{USER\_PROCESS.h}!newMessage@{newMessage}}
+\index{newMessage@{newMessage}!USER\_PROCESS.h@{USER\_PROCESS.h}}
+\doxysubsubsection{\texorpdfstring{newMessage()}{newMessage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_message}{Message}} \texorpdfstring{$\ast$}{*} new\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that allows you to create a new message. 
+
+\begin{DoxyReturn}{Returns}
+tmp Returns the structure of the message with all fields 
+\end{DoxyReturn}
+\Hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a302e52cb142c74f1aa27922946a56ccb}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a302e52cb142c74f1aa27922946a56ccb} 
+\index{USER\_PROCESS.h@{USER\_PROCESS.h}!process\_avaiable@{process\_avaiable}}
+\index{process\_avaiable@{process\_avaiable}!USER\_PROCESS.h@{USER\_PROCESS.h}}
+\doxysubsubsection{\texorpdfstring{process\_avaiable()}{process\_avaiable()}}
+{\footnotesize\ttfamily int process\+\_\+avaiable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that allows you to view all the processes registered within the kernel. 
+
+\begin{DoxyReturn}{Returns}
+0 -\/\texorpdfstring{$>$}{>} If there are no errors 
+
+3 -\/\texorpdfstring{$>$}{>} If the process fails to open the shared memory 
+
+4 -\/\texorpdfstring{$>$}{>} If the process fails read the pid from the kernel 
+\end{DoxyReturn}
+\Hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a4590adac7e906e93cb13d50ebf1ac9cb}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_a4590adac7e906e93cb13d50ebf1ac9cb} 
+\index{USER\_PROCESS.h@{USER\_PROCESS.h}!reg\_unreg@{reg\_unreg}}
+\index{reg\_unreg@{reg\_unreg}!USER\_PROCESS.h@{USER\_PROCESS.h}}
+\doxysubsubsection{\texorpdfstring{reg\_unreg()}{reg\_unreg()}}
+{\footnotesize\ttfamily int reg\+\_\+unreg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

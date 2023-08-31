@@ -1,0 +1,132 @@
+\doxysection{sync\+\_\+pid Struct Reference}
+\hypertarget{structsync__pid}{}\label{structsync__pid}\index{sync\_pid@{sync\_pid}}
+
+
+This is the declaration of the type \doxylink{structsync__pid}{sync\+\_\+pid}.  
+
+
+
+
+{\ttfamily \#include $<$IPC\+\_\+\+SO.\+h$>$}
+
+
+
+Collaboration diagram for sync\+\_\+pid\+:
+% FIG 0
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structsync__pid_af500917c052066b40cf47f96b43c607b}{pid}}
+\item 
+wait\+\_\+queue\+\_\+head\+\_\+t \mbox{\hyperlink{structsync__pid_aae62a9151cad47e2f5e89b504060b5c4}{wait\+\_\+queue}}
+\begin{DoxyCompactList}\small\item\em variable that allows process to sleep \end{DoxyCompactList}\item 
+wait\+\_\+queue\+\_\+head\+\_\+t \mbox{\hyperlink{structsync__pid_a36511f4ff66edca25cacbcea12e004ce}{wait\+\_\+queue\+\_\+delay}}
+\begin{DoxyCompactList}\small\item\em variable that allows process to sleep for an amount of time \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsync__pid_a9ed8ff2672b2820bf1fd8d4323041d08}{letto}}
+\begin{DoxyCompactList}\small\item\em flag to check if the wait queue has been woken up \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsync__pid_a6f1be1f780ff54ec75b41451cd4d90bd}{delay}}
+\item 
+bool \mbox{\hyperlink{structsync__pid_a386b789a72afd1c8f320ffb16710ade9}{change\+\_\+delay}}
+\begin{DoxyCompactList}\small\item\em flag to check if the delay has been changed \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsync__pid_a2251ba55279aef307357d4b82d7cffb7}{first\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em flag to check if this istance of struct \doxylink{structsync__pid}{sync\+\_\+pid} has been modified \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsync__pid_a27e2d7b9e015bc97b8c5eebd05a4f9a5}{arrival}}
+\begin{DoxyCompactList}\small\item\em variable used as unique ID \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structsync__pid_abf811cbbe49010d77608024a8fff602e}{effective\+\_\+delay}}
+\begin{DoxyCompactList}\small\item\em represents the delay that the process has to wait \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structsync__pid_a93fdc805a3a7aacf7e55ffe6e976139b}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the declaration of the type \doxylink{structsync__pid}{sync\+\_\+pid}. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structsync__pid_a27e2d7b9e015bc97b8c5eebd05a4f9a5}\label{structsync__pid_a27e2d7b9e015bc97b8c5eebd05a4f9a5} 
+\index{sync\_pid@{sync\_pid}!arrival@{arrival}}
+\index{arrival@{arrival}!sync\_pid@{sync\_pid}}
+\doxysubsubsection{\texorpdfstring{arrival}{arrival}}
+{\footnotesize\ttfamily int arrival}
+
+
+
+variable used as unique ID 
+
+\Hypertarget{structsync__pid_a386b789a72afd1c8f320ffb16710ade9}\label{structsync__pid_a386b789a72afd1c8f320ffb16710ade9} 
+\index{sync\_pid@{sync\_pid}!change\_delay@{change\_delay}}
+\index{change\_delay@{change\_delay}!sync\_pid@{sync\_pid}}
+\doxysubsubsection{\texorpdfstring{change\_delay}{change\_delay}}
+{\footnotesize\ttfamily bool change\+\_\+delay}
+
+
+
+flag to check if the delay has been changed 
+
+\Hypertarget{structsync__pid_a6f1be1f780ff54ec75b41451cd4d90bd}\label{structsync__pid_a6f1be1f780ff54ec75b41451cd4d90bd} 
+\index{sync\_pid@{sync\_pid}!delay@{delay}}
+\index{delay@{delay}!sync\_pid@{sync\_pid}}
+\doxysubsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily int delay}
+
+\Hypertarget{structsync__pid_abf811cbbe49010d77608024a8fff602e}\label{structsync__pid_abf811cbbe49010d77608024a8fff602e} 
+\index{sync\_pid@{sync\_pid}!effective\_delay@{effective\_delay}}
+\index{effective\_delay@{effective\_delay}!sync\_pid@{sync\_pid}}
+\doxysubsubsection{\texorpdfstring{effective\_delay}{effective\_delay}}
+{\footnotesize\ttfamily int effective\+\_\+delay}
+
+
+
+represents the delay that the process has to wait 
+
+\Hypertarget{structsync__pid_a2251ba55279aef307357d4b82d7cffb7}\label{structsync__pid_a2251ba55279aef307357d4b82d7cffb7} 
+\index{sync\_pid@{sync\_pid}!first\_time@{first\_time}}
+\index{first\_time@{first\_time}!sync\_pid@{sync\_pid}}
+\doxysubsubsection{\texorpdfstring{first\_time}{first\_time}}
+{\footnotesize\ttfamily int first\+\_\+time}
+
+
+
+flag to check if this istance of struct \doxylink{structsync__pid}{sync\+\_\+pid} has been modified 
+
+\Hypertarget{structsync__pid_a9ed8ff2672b2820bf1fd8d4323041d08}\label{structsync__pid_a9ed8ff2672b2820bf1fd8d4323041d08} 
+\index{sync\_pid@{sync\_pid}!letto@{letto}}
+\index{letto@{letto}!sync\_pid@{sync\_pid}}
+\doxysubsubsection{\texorpdfstring{letto}{letto}}
+{\footnotesize\ttfamily bool letto}
+
+
+
+flag to check if the wait queue has been woken up 
+
+\Hypertarget{structsync__pid_a93fdc805a3a7aacf7e55ffe6e976139b}\label{structsync__pid_a93fdc805a3a7aacf7e55ffe6e976139b} 
+\index{sync\_pid@{sync\_pid}!next@{next}}
+\index{next@{next}!sync\_pid@{sync\_pid}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}}\texorpdfstring{$\ast$}{*} next}
+
+\Hypertarget{structsync__pid_af500917c052066b40cf47f96b43c607b}\label{structsync__pid_af500917c052066b40cf47f96b43c607b} 
+\index{sync\_pid@{sync\_pid}!pid@{pid}}
+\index{pid@{pid}!sync\_pid@{sync\_pid}}
+\doxysubsubsection{\texorpdfstring{pid}{pid}}
+{\footnotesize\ttfamily int pid}
+
+\Hypertarget{structsync__pid_aae62a9151cad47e2f5e89b504060b5c4}\label{structsync__pid_aae62a9151cad47e2f5e89b504060b5c4} 
+\index{sync\_pid@{sync\_pid}!wait\_queue@{wait\_queue}}
+\index{wait\_queue@{wait\_queue}!sync\_pid@{sync\_pid}}
+\doxysubsubsection{\texorpdfstring{wait\_queue}{wait\_queue}}
+{\footnotesize\ttfamily wait\+\_\+queue\+\_\+head\+\_\+t wait\+\_\+queue}
+
+
+
+variable that allows process to sleep 
+
+\Hypertarget{structsync__pid_a36511f4ff66edca25cacbcea12e004ce}\label{structsync__pid_a36511f4ff66edca25cacbcea12e004ce} 
+\index{sync\_pid@{sync\_pid}!wait\_queue\_delay@{wait\_queue\_delay}}
+\index{wait\_queue\_delay@{wait\_queue\_delay}!sync\_pid@{sync\_pid}}
+\doxysubsubsection{\texorpdfstring{wait\_queue\_delay}{wait\_queue\_delay}}
+{\footnotesize\ttfamily wait\+\_\+queue\+\_\+head\+\_\+t wait\+\_\+queue\+\_\+delay}
+
+
+
+variable that allows process to sleep for an amount of time 
+

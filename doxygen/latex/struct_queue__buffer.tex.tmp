@@ -1,0 +1,51 @@
+\doxysection{Queue\+\_\+buffer Struct Reference}
+\hypertarget{struct_queue__buffer}{}\label{struct_queue__buffer}\index{Queue\_buffer@{Queue\_buffer}}
+
+
+This is the declaration of the type \doxylink{struct_queue__buffer}{Queue\+\_\+buffer}.  
+
+
+
+
+{\ttfamily \#include $<$IPC\+\_\+\+SO.\+h$>$}
+
+
+
+Collaboration diagram for Queue\+\_\+buffer\+:
+% FIG 0
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_i_p_c___s_o_8h_a82fffef6ac8d8a796ab35b7d6a7a0dcb}{Message}} \mbox{\hyperlink{struct_queue__buffer_ae340596ff8a5dd94477f575fde53bb9a}{mymes}}
+\begin{DoxyCompactList}\small\item\em This field contains only messages with delay expired. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_queue__buffer}{Queue\+\_\+buffer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_queue__buffer_a88dbdd39097cffd1db0f0122db41f6fa}{next}}
+\begin{DoxyCompactList}\small\item\em Pointer to the next element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the declaration of the type \doxylink{struct_queue__buffer}{Queue\+\_\+buffer}. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_queue__buffer_ae340596ff8a5dd94477f575fde53bb9a}\label{struct_queue__buffer_ae340596ff8a5dd94477f575fde53bb9a} 
+\index{Queue\_buffer@{Queue\_buffer}!mymes@{mymes}}
+\index{mymes@{mymes}!Queue\_buffer@{Queue\_buffer}}
+\doxysubsubsection{\texorpdfstring{mymes}{mymes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_i_p_c___s_o_8h_a82fffef6ac8d8a796ab35b7d6a7a0dcb}{Message}} mymes}
+
+
+
+This field contains only messages with delay expired. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_message}{Message} for more info 
+\end{DoxySeeAlso}
+\Hypertarget{struct_queue__buffer_a88dbdd39097cffd1db0f0122db41f6fa}\label{struct_queue__buffer_a88dbdd39097cffd1db0f0122db41f6fa} 
+\index{Queue\_buffer@{Queue\_buffer}!next@{next}}
+\index{next@{next}!Queue\_buffer@{Queue\_buffer}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_queue__buffer}{Queue\+\_\+buffer}}\texorpdfstring{$\ast$}{*} next}
+
+
+
+Pointer to the next element. 
+

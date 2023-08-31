@@ -1,0 +1,638 @@
+\doxysection{/home/vboxuser/\+Desktop/test/kernel/ipc-\/so.c File Reference}
+\hypertarget{ipc-so_8c}{}\label{ipc-so_8c}\index{/home/vboxuser/Desktop/test/kernel/ipc-\/so.c@{/home/vboxuser/Desktop/test/kernel/ipc-\/so.c}}
+{\ttfamily \#include "{}IPC\+\_\+\+SO.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{ipc-so_8c_ab67cfb4f05d8eebe7f7abdfd76f4549d}{registration\+\_\+open}} (struct inode \texorpdfstring{$\ast$}{*}inode, struct file \texorpdfstring{$\ast$}{*}file)
+\item 
+static int \mbox{\hyperlink{ipc-so_8c_ae7663312a5487377adad4944fadb452c}{registration\+\_\+release}} (struct inode \texorpdfstring{$\ast$}{*}inode, struct file \texorpdfstring{$\ast$}{*}file)
+\item 
+static ssize\+\_\+t \mbox{\hyperlink{ipc-so_8c_a9f2cb06dd03571ef3abc401f73f53a71}{registration\+\_\+read}} (struct file \texorpdfstring{$\ast$}{*}file, char \+\_\+\+\_\+user \texorpdfstring{$\ast$}{*}user\+\_\+buf, size\+\_\+t size, loff\+\_\+t \texorpdfstring{$\ast$}{*}offset)
+\item 
+static ssize\+\_\+t \mbox{\hyperlink{ipc-so_8c_a8b44eb9b13f6192d666c26ebf88323de}{registration\+\_\+write}} (struct file \texorpdfstring{$\ast$}{*}file, const char \+\_\+\+\_\+user \texorpdfstring{$\ast$}{*}user\+\_\+buf, size\+\_\+t size, loff\+\_\+t \texorpdfstring{$\ast$}{*}offset)
+\item 
+static int \mbox{\hyperlink{ipc-so_8c_a666979f5a8bc2bbb596fcc758d06aa21}{synchronous\+\_\+open}} (struct inode \texorpdfstring{$\ast$}{*}inode, struct file \texorpdfstring{$\ast$}{*}file)
+\item 
+static int \mbox{\hyperlink{ipc-so_8c_afbfdcda74ec07f43136c3ce5e471e4b7}{synchronous\+\_\+release}} (struct inode \texorpdfstring{$\ast$}{*}inode, struct file \texorpdfstring{$\ast$}{*}file)
+\item 
+static ssize\+\_\+t \mbox{\hyperlink{ipc-so_8c_a5fe387e965cac5ca7d79a3ad8b2391ad}{synchronous\+\_\+read}} (struct file \texorpdfstring{$\ast$}{*}file, char \+\_\+\+\_\+user \texorpdfstring{$\ast$}{*}user\+\_\+buf, size\+\_\+t size, loff\+\_\+t \texorpdfstring{$\ast$}{*}offset)
+\item 
+static ssize\+\_\+t \mbox{\hyperlink{ipc-so_8c_a93aad87a88ebbec592c72cf169f30529}{synchronous\+\_\+write}} (struct file \texorpdfstring{$\ast$}{*}file, const char \+\_\+\+\_\+user \texorpdfstring{$\ast$}{*}user\+\_\+buf, size\+\_\+t size, loff\+\_\+t \texorpdfstring{$\ast$}{*}offset)
+\item 
+static int \mbox{\hyperlink{ipc-so_8c_aaed2f3c96c59d86d2320c1fdfd28f16a}{shared\+\_\+memory\+\_\+open}} (struct inode \texorpdfstring{$\ast$}{*}inode, struct file \texorpdfstring{$\ast$}{*}file)
+\item 
+static int \mbox{\hyperlink{ipc-so_8c_af2d44066b03654f9094624e192152ac8}{shared\+\_\+memory\+\_\+release}} (struct inode \texorpdfstring{$\ast$}{*}inode, struct file \texorpdfstring{$\ast$}{*}file)
+\item 
+static ssize\+\_\+t \mbox{\hyperlink{ipc-so_8c_a0bad5473f34de5f9ebf5f5d704d3865f}{shared\+\_\+memory\+\_\+read}} (struct file \texorpdfstring{$\ast$}{*}file, char \+\_\+\+\_\+user \texorpdfstring{$\ast$}{*}user\+\_\+buf, size\+\_\+t size, loff\+\_\+t \texorpdfstring{$\ast$}{*}offset)
+\item 
+static ssize\+\_\+t \mbox{\hyperlink{ipc-so_8c_ab4a4b757872abc5edf2c21af9dcb2cfd}{shared\+\_\+memory\+\_\+write}} (struct file \texorpdfstring{$\ast$}{*}file, const char \+\_\+\+\_\+user \texorpdfstring{$\ast$}{*}user\+\_\+buf, size\+\_\+t size, loff\+\_\+t \texorpdfstring{$\ast$}{*}offset)
+\item 
+static int \+\_\+\+\_\+init \mbox{\hyperlink{ipc-so_8c_a262c74734704fff4f3387d8e5ecfa730}{ipc\+\_\+os\+\_\+module\+\_\+init}} (void)
+\item 
+static void \+\_\+\+\_\+exit \mbox{\hyperlink{ipc-so_8c_a028fc66ab4d1cc360513d0d90231f4ed}{ipc\+\_\+os\+\_\+module\+\_\+exit}} (void)
+\item 
+\mbox{\hyperlink{structqueue__pid}{queue\+\_\+pid}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ipc-so_8c_a5713835c8b1b870ff6a020087d6af224}{reg\+\_\+init}} (int id)
+\begin{DoxyCompactList}\small\item\em Initialize a new node of type \doxylink{structqueue__pid}{queue\+\_\+pid}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ipc-so_8c_ae6e524bbc03e36cc38734620cf1cb5b5}{reg\+\_\+insert}} (\mbox{\hyperlink{structqueue__pid}{queue\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_i_p_c___s_o_8h_ad521f6ca7f7fa235ef967eb2fc039434}{first}}, \mbox{\hyperlink{structqueue__pid}{queue\+\_\+pid}} \texorpdfstring{$\ast$}{*}item)
+\begin{DoxyCompactList}\small\item\em Insert the new item \doxylink{structqueue__pid}{queue\+\_\+pid} into the pid queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ipc-so_8c_a9d22361fed066d531130b1c54af6121d}{reg\+\_\+delete}} (\mbox{\hyperlink{structqueue__pid}{queue\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_i_p_c___s_o_8h_ad521f6ca7f7fa235ef967eb2fc039434}{first}}, int target)
+\begin{DoxyCompactList}\small\item\em Delete a target \doxylink{structqueue__pid}{queue\+\_\+pid} item from the pid\textquotesingle{}s queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ipc-so_8c_a9d8fab16f2e00a3612e5dec61762d899}{reg\+\_\+deinit}} (\mbox{\hyperlink{structqueue__pid}{queue\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_i_p_c___s_o_8h_ad521f6ca7f7fa235ef967eb2fc039434}{first}})
+\begin{DoxyCompactList}\small\item\em Deinit the entire pid\textquotesingle{}s queue and free the memory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ipc-so_8c_a708813146638114464c3c26e956d5046}{reg\+\_\+search}} (\mbox{\hyperlink{structqueue__pid}{queue\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_i_p_c___s_o_8h_ad521f6ca7f7fa235ef967eb2fc039434}{first}}, int val)
+\begin{DoxyCompactList}\small\item\em Search a specific PID into the pid\textquotesingle{}s queue, used to discriminate between registration and unregistration operations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ipc-so_8c_a1d1cbb803b4d5fb8ebc9ba474f3d674f}{sync\+\_\+init}} (int sync\+\_\+pid\+\_\+val)
+\begin{DoxyCompactList}\small\item\em Initialize a new node of type \doxylink{structsync__pid}{sync\+\_\+pid}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ipc-so_8c_afd2a7c48e123899e5a2605fb64589641}{sync\+\_\+insert}} (\mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_i_p_c___s_o_8h_ad521f6ca7f7fa235ef967eb2fc039434}{first}}, \mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*}item)
+\begin{DoxyCompactList}\small\item\em Insert the new item \doxylink{structsync__pid}{sync\+\_\+pid} into the sync queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ipc-so_8c_acef7eb35b6bef9295e66daf9cced44c3}{sync\+\_\+delete}} (\mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_i_p_c___s_o_8h_ad521f6ca7f7fa235ef967eb2fc039434}{first}}, int target)
+\begin{DoxyCompactList}\small\item\em Delete a target \doxylink{structsync__pid}{sync\+\_\+pid} item from the sync queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ipc-so_8c_a562571457bed60513c1a385b1c34d9f2}{sync\+\_\+deinit}} (\mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_i_p_c___s_o_8h_ad521f6ca7f7fa235ef967eb2fc039434}{first}})
+\begin{DoxyCompactList}\small\item\em Deinit the entire pid\textquotesingle{}s queue and free the memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ipc-so_8c_acdc1e45eb5cfd8485b3c262a7e3b9f5b}{sync\+\_\+search}} (\mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_i_p_c___s_o_8h_ad521f6ca7f7fa235ef967eb2fc039434}{first}}, int val)
+\begin{DoxyCompactList}\small\item\em Scan the sync queue and determinate if a target PID is in it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_message}{Message}} \mbox{\hyperlink{ipc-so_8c_a4d4b37514f9818f512ab4bedb41a6a39}{Priority\+Dequeue\+\_\+sync}} (int target\+\_\+arrival)
+\begin{DoxyCompactList}\small\item\em Dequeue a specific message from PQ using it\textquotesingle{}s arrival. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_queue__mes}{Queue\+\_\+mes}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ipc-so_8c_ab5f2ce5e5830ddecd31e167860f9791d}{pqinit}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the vector of \doxylink{struct_queue__mes}{Queue\+\_\+mes}, called PQ (Priority Queue) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ipc-so_8c_a937730eac1421f6cb4c9eb736820f158}{Priority\+Dequeue\+\_\+mes}} (\mbox{\hyperlink{struct_queue__mes}{Queue\+\_\+mes}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_i_p_c___s_o_8h_ad521f6ca7f7fa235ef967eb2fc039434}{first}}, int pid\+\_\+caller)
+\begin{DoxyCompactList}\small\item\em Dequeue a specific \doxylink{struct_queue__mes}{Queue\+\_\+mes} from the respective PQ\mbox{[}i\mbox{]}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ipc-so_8c_ac02669a3e6a7b041de86d13b262b11c0}{sync\+\_\+mes\+\_\+find\+\_\+check}} (int var)
+\begin{DoxyCompactList}\small\item\em Determine whether there are messages in the priority queues with a specific target PID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structchange_data}{change\+Data}} \mbox{\hyperlink{ipc-so_8c_ad048d0a8c1ce53eca41afd90dadbd971}{sync\+\_\+mes\+\_\+find}} (int target\+\_\+pid)
+\begin{DoxyCompactList}\small\item\em Compares different messages with the target pid and return the one with the minimum delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ipc-so_8c_aac5932d94375fff2a8b70417f77e1efd}{pq\+\_\+print}} (\mbox{\hyperlink{struct_queue__mes}{Queue\+\_\+mes}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}t)
+\begin{DoxyCompactList}\small\item\em Output information about the elements stored in the priority queues for debugging or informational purposes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ipc-so_8c_ab2075d20abc2f0b4089f469666303350}{Priority\+Enqueue\+\_\+mes}} (\mbox{\hyperlink{struct_queue__mes}{Queue\+\_\+mes}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}t, \mbox{\hyperlink{struct_message}{Message}} \texorpdfstring{$\ast$}{*}m)
+\begin{DoxyCompactList}\small\item\em Enqueue a new item \doxylink{struct_queue__mes}{Queue\+\_\+mes} in the respective PQ\mbox{[}i\mbox{]} level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ipc-so_8c_ab825a91abc33cbf45445e3b3ba12b4ca}{pq\+\_\+deinit}} (\mbox{\hyperlink{struct_queue__mes}{Queue\+\_\+mes}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}my\+PQ)
+\begin{DoxyCompactList}\small\item\em Dequeue each PQ\mbox{[}i\mbox{]} and free the memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_queue__buffer}{Queue\+\_\+buffer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ipc-so_8c_a044dbc167407e69601ae5a1409389009}{bq\+\_\+init}} (\mbox{\hyperlink{struct_message}{Message}} tmp)
+\begin{DoxyCompactList}\small\item\em Initialize a new node of type \doxylink{struct_queue__buffer}{Queue\+\_\+buffer}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ipc-so_8c_a562a9be6611bb77cdd19b6aba76ab1b0}{bq\+\_\+enqueue}} (\mbox{\hyperlink{struct_queue__buffer}{Queue\+\_\+buffer}} \texorpdfstring{$\ast$}{*}tmp)
+\begin{DoxyCompactList}\small\item\em Enqueue a new item of type \doxylink{struct_queue__buffer}{Queue\+\_\+buffer} in the buffer queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_message}{Message}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ipc-so_8c_ad353e36d75a79c7ee5e4bd8f6b261a05}{bq\+\_\+dequeue}} (void)
+\begin{DoxyCompactList}\small\item\em Dequeue the head item from the buffer queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ipc-so_8c_a7ae3d4f31e53c5d0eeb9b58a3cd2ce3e}{module\+\_\+init}} (\mbox{\hyperlink{ipc-so_8c_a262c74734704fff4f3387d8e5ecfa730}{ipc\+\_\+os\+\_\+module\+\_\+init}})
+\item 
+\mbox{\hyperlink{ipc-so_8c_afeb9d87d3ddcc9dc71446d08f7abd5b5}{module\+\_\+exit}} (\mbox{\hyperlink{ipc-so_8c_a028fc66ab4d1cc360513d0d90231f4ed}{ipc\+\_\+os\+\_\+module\+\_\+exit}})
+\item 
+\mbox{\hyperlink{ipc-so_8c_ad94b36675e7eb067ea3ce6ff9e244a44}{MODULE\+\_\+\+LICENSE}} ("{}GPL"{})
+\item 
+\mbox{\hyperlink{ipc-so_8c_a7a4de186201ca1bc2ecaf1a7133f33cc}{MODULE\+\_\+\+AUTHOR}} ("{}Alex Cattoni, Dennis Cattoni, Manuel Vettori"{})
+\item 
+\mbox{\hyperlink{ipc-so_8c_af7c39e5b6cc0d6cd12698db617d95ef2}{MODULE\+\_\+\+DESCRIPTION}} ("{}IPC-\/SO"{})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static struct file\+\_\+operations \mbox{\hyperlink{ipc-so_8c_a28ee7ed9613033920e733c9da671f79c}{fops}}
+\item 
+static struct file\+\_\+operations \mbox{\hyperlink{ipc-so_8c_a9c559d18fea2a4dd21a7df3a7f3c3c0e}{fops\+\_\+sync}}
+\item 
+static struct file\+\_\+operations \mbox{\hyperlink{ipc-so_8c_a761da16d0a8f351326431a6182473eae}{fops\+\_\+sm}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ipc-so_8c_ad353e36d75a79c7ee5e4bd8f6b261a05}\label{ipc-so_8c_ad353e36d75a79c7ee5e4bd8f6b261a05} 
+\index{ipc-\/so.c@{ipc-\/so.c}!bq\_dequeue@{bq\_dequeue}}
+\index{bq\_dequeue@{bq\_dequeue}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{bq\_dequeue()}{bq\_dequeue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_message}{Message}} \texorpdfstring{$\ast$}{*} bq\+\_\+dequeue (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Dequeue the head item from the buffer queue. 
+
+\begin{DoxyReturn}{Returns}
+\texorpdfstring{$\ast$}{*}msg, pointers to the first message in the buffer queue (FIFO) 
+
+NULL, if the buffer queue is empty 
+\end{DoxyReturn}
+\Hypertarget{ipc-so_8c_a562a9be6611bb77cdd19b6aba76ab1b0}\label{ipc-so_8c_a562a9be6611bb77cdd19b6aba76ab1b0} 
+\index{ipc-\/so.c@{ipc-\/so.c}!bq\_enqueue@{bq\_enqueue}}
+\index{bq\_enqueue@{bq\_enqueue}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{bq\_enqueue()}{bq\_enqueue()}}
+{\footnotesize\ttfamily void bq\+\_\+enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue__buffer}{Queue\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{tmp }\end{DoxyParamCaption})}
+
+
+
+Enqueue a new item of type \doxylink{struct_queue__buffer}{Queue\+\_\+buffer} in the buffer queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmp} & Item of type \doxylink{struct_queue__buffer}{Queue\+\_\+buffer}, ready to be enqueued \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ipc-so_8c_a044dbc167407e69601ae5a1409389009}\label{ipc-so_8c_a044dbc167407e69601ae5a1409389009} 
+\index{ipc-\/so.c@{ipc-\/so.c}!bq\_init@{bq\_init}}
+\index{bq\_init@{bq\_init}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{bq\_init()}{bq\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_queue__buffer}{Queue\+\_\+buffer}} \texorpdfstring{$\ast$}{*} bq\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_message}{Message}}}]{tmp }\end{DoxyParamCaption})}
+
+
+
+Initialize a new node of type \doxylink{struct_queue__buffer}{Queue\+\_\+buffer}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmp} & temporary \doxylink{struct_message}{Message} ready to be enqueued \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new\+\_\+node, memory allocation for the new \doxylink{struct_queue__buffer}{Queue\+\_\+buffer} node is successful 
+
+ERR\+\_\+\+PTR(-\/EFAULT), indicate the allocation failure 
+\end{DoxyReturn}
+\Hypertarget{ipc-so_8c_a028fc66ab4d1cc360513d0d90231f4ed}\label{ipc-so_8c_a028fc66ab4d1cc360513d0d90231f4ed} 
+\index{ipc-\/so.c@{ipc-\/so.c}!ipc\_os\_module\_exit@{ipc\_os\_module\_exit}}
+\index{ipc\_os\_module\_exit@{ipc\_os\_module\_exit}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{ipc\_os\_module\_exit()}{ipc\_os\_module\_exit()}}
+{\footnotesize\ttfamily static void \+\_\+\+\_\+exit ipc\+\_\+os\+\_\+module\+\_\+exit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{ipc-so_8c_a262c74734704fff4f3387d8e5ecfa730}\label{ipc-so_8c_a262c74734704fff4f3387d8e5ecfa730} 
+\index{ipc-\/so.c@{ipc-\/so.c}!ipc\_os\_module\_init@{ipc\_os\_module\_init}}
+\index{ipc\_os\_module\_init@{ipc\_os\_module\_init}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{ipc\_os\_module\_init()}{ipc\_os\_module\_init()}}
+{\footnotesize\ttfamily static int \+\_\+\+\_\+init ipc\+\_\+os\+\_\+module\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{ipc-so_8c_a7a4de186201ca1bc2ecaf1a7133f33cc}\label{ipc-so_8c_a7a4de186201ca1bc2ecaf1a7133f33cc} 
+\index{ipc-\/so.c@{ipc-\/so.c}!MODULE\_AUTHOR@{MODULE\_AUTHOR}}
+\index{MODULE\_AUTHOR@{MODULE\_AUTHOR}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{MODULE\_AUTHOR()}{MODULE\_AUTHOR()}}
+{\footnotesize\ttfamily MODULE\+\_\+\+AUTHOR (\begin{DoxyParamCaption}\item[{"{}Alex}]{Cattoni,  }\item[{Dennis}]{Cattoni,  }\item[{Manuel Vettori"{}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{ipc-so_8c_af7c39e5b6cc0d6cd12698db617d95ef2}\label{ipc-so_8c_af7c39e5b6cc0d6cd12698db617d95ef2} 
+\index{ipc-\/so.c@{ipc-\/so.c}!MODULE\_DESCRIPTION@{MODULE\_DESCRIPTION}}
+\index{MODULE\_DESCRIPTION@{MODULE\_DESCRIPTION}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{MODULE\_DESCRIPTION()}{MODULE\_DESCRIPTION()}}
+{\footnotesize\ttfamily MODULE\+\_\+\+DESCRIPTION (\begin{DoxyParamCaption}\item[{"{}IPC-\/SO"{}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{ipc-so_8c_afeb9d87d3ddcc9dc71446d08f7abd5b5}\label{ipc-so_8c_afeb9d87d3ddcc9dc71446d08f7abd5b5} 
+\index{ipc-\/so.c@{ipc-\/so.c}!module\_exit@{module\_exit}}
+\index{module\_exit@{module\_exit}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{module\_exit()}{module\_exit()}}
+{\footnotesize\ttfamily module\+\_\+exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ipc-so_8c_a028fc66ab4d1cc360513d0d90231f4ed}{ipc\+\_\+os\+\_\+module\+\_\+exit}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{ipc-so_8c_a7ae3d4f31e53c5d0eeb9b58a3cd2ce3e}\label{ipc-so_8c_a7ae3d4f31e53c5d0eeb9b58a3cd2ce3e} 
+\index{ipc-\/so.c@{ipc-\/so.c}!module\_init@{module\_init}}
+\index{module\_init@{module\_init}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{module\_init()}{module\_init()}}
+{\footnotesize\ttfamily module\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ipc-so_8c_a262c74734704fff4f3387d8e5ecfa730}{ipc\+\_\+os\+\_\+module\+\_\+init}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{ipc-so_8c_ad94b36675e7eb067ea3ce6ff9e244a44}\label{ipc-so_8c_ad94b36675e7eb067ea3ce6ff9e244a44} 
+\index{ipc-\/so.c@{ipc-\/so.c}!MODULE\_LICENSE@{MODULE\_LICENSE}}
+\index{MODULE\_LICENSE@{MODULE\_LICENSE}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{MODULE\_LICENSE()}{MODULE\_LICENSE()}}
+{\footnotesize\ttfamily MODULE\+\_\+\+LICENSE (\begin{DoxyParamCaption}\item[{"{}GPL"{}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{ipc-so_8c_ab825a91abc33cbf45445e3b3ba12b4ca}\label{ipc-so_8c_ab825a91abc33cbf45445e3b3ba12b4ca} 
+\index{ipc-\/so.c@{ipc-\/so.c}!pq\_deinit@{pq\_deinit}}
+\index{pq\_deinit@{pq\_deinit}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{pq\_deinit()}{pq\_deinit()}}
+{\footnotesize\ttfamily void pq\+\_\+deinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue__mes}{Queue\+\_\+mes}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{t }\end{DoxyParamCaption})}
+
+
+
+Dequeue each PQ\mbox{[}i\mbox{]} and free the memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Global pointer to the first element \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ipc-so_8c_aac5932d94375fff2a8b70417f77e1efd}\label{ipc-so_8c_aac5932d94375fff2a8b70417f77e1efd} 
+\index{ipc-\/so.c@{ipc-\/so.c}!pq\_print@{pq\_print}}
+\index{pq\_print@{pq\_print}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{pq\_print()}{pq\_print()}}
+{\footnotesize\ttfamily void pq\+\_\+print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue__mes}{Queue\+\_\+mes}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{t }\end{DoxyParamCaption})}
+
+
+
+Output information about the elements stored in the priority queues for debugging or informational purposes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Global pointer to the first element \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ipc-so_8c_ab5f2ce5e5830ddecd31e167860f9791d}\label{ipc-so_8c_ab5f2ce5e5830ddecd31e167860f9791d} 
+\index{ipc-\/so.c@{ipc-\/so.c}!pqinit@{pqinit}}
+\index{pqinit@{pqinit}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{pqinit()}{pqinit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_queue__mes}{Queue\+\_\+mes}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} pqinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the vector of \doxylink{struct_queue__mes}{Queue\+\_\+mes}, called PQ (Priority Queue) 
+
+\begin{DoxyReturn}{Returns}
+my\+PQ, valid pointer to an array of \doxylink{struct_queue__mes}{Queue\+\_\+mes} pointers 
+
+NULL, memory allocation for the array of \doxylink{struct_queue__mes}{Queue\+\_\+mes} pointers fails 
+
+ERR\+\_\+\+PTR(-\/EFAULT), memory allocation for an individual priority queue within the array fails 
+\end{DoxyReturn}
+\Hypertarget{ipc-so_8c_a937730eac1421f6cb4c9eb736820f158}\label{ipc-so_8c_a937730eac1421f6cb4c9eb736820f158} 
+\index{ipc-\/so.c@{ipc-\/so.c}!PriorityDequeue\_mes@{PriorityDequeue\_mes}}
+\index{PriorityDequeue\_mes@{PriorityDequeue\_mes}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{PriorityDequeue\_mes()}{PriorityDequeue\_mes()}}
+{\footnotesize\ttfamily void Priority\+Dequeue\+\_\+mes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue__mes}{Queue\+\_\+mes}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{first,  }\item[{int}]{pid\+\_\+caller }\end{DoxyParamCaption})}
+
+
+
+Dequeue a specific \doxylink{struct_queue__mes}{Queue\+\_\+mes} from the respective PQ\mbox{[}i\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Global pointer to the first element \\
+\hline
+{\em pid\+\_\+caller} & target PID that represents the nested Messages of interests \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_queue__mes}{Queue\+\_\+mes} and \doxylink{struct_message}{Message} for mor details 
+\end{DoxySeeAlso}
+\Hypertarget{ipc-so_8c_a4d4b37514f9818f512ab4bedb41a6a39}\label{ipc-so_8c_a4d4b37514f9818f512ab4bedb41a6a39} 
+\index{ipc-\/so.c@{ipc-\/so.c}!PriorityDequeue\_sync@{PriorityDequeue\_sync}}
+\index{PriorityDequeue\_sync@{PriorityDequeue\_sync}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{PriorityDequeue\_sync()}{PriorityDequeue\_sync()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_message}{Message}} Priority\+Dequeue\+\_\+sync (\begin{DoxyParamCaption}\item[{int}]{target\+\_\+arrival }\end{DoxyParamCaption})}
+
+
+
+Dequeue a specific message from PQ using it\textquotesingle{}s arrival. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+arrival} & Target for the dequeue operation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+target\+\_\+sync\+\_\+mes, returns the dequeued target \doxylink{struct_message}{Message} 
+\end{DoxyReturn}
+\Hypertarget{ipc-so_8c_ab2075d20abc2f0b4089f469666303350}\label{ipc-so_8c_ab2075d20abc2f0b4089f469666303350} 
+\index{ipc-\/so.c@{ipc-\/so.c}!PriorityEnqueue\_mes@{PriorityEnqueue\_mes}}
+\index{PriorityEnqueue\_mes@{PriorityEnqueue\_mes}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{PriorityEnqueue\_mes()}{PriorityEnqueue\_mes()}}
+{\footnotesize\ttfamily void Priority\+Enqueue\+\_\+mes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue__mes}{Queue\+\_\+mes}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{t,  }\item[{\mbox{\hyperlink{struct_message}{Message}} \texorpdfstring{$\ast$}{*}}]{m }\end{DoxyParamCaption})}
+
+
+
+Enqueue a new item \doxylink{struct_queue__mes}{Queue\+\_\+mes} in the respective PQ\mbox{[}i\mbox{]} level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Global pointer to the first element \\
+\hline
+{\em m} & \doxylink{struct_message}{Message} from the user process \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ipc-so_8c_a9d8fab16f2e00a3612e5dec61762d899}\label{ipc-so_8c_a9d8fab16f2e00a3612e5dec61762d899} 
+\index{ipc-\/so.c@{ipc-\/so.c}!reg\_deinit@{reg\_deinit}}
+\index{reg\_deinit@{reg\_deinit}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{reg\_deinit()}{reg\_deinit()}}
+{\footnotesize\ttfamily void reg\+\_\+deinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue__pid}{queue\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{first }\end{DoxyParamCaption})}
+
+
+
+Deinit the entire pid\textquotesingle{}s queue and free the memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Global pointer to the first element \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ipc-so_8c_a9d22361fed066d531130b1c54af6121d}\label{ipc-so_8c_a9d22361fed066d531130b1c54af6121d} 
+\index{ipc-\/so.c@{ipc-\/so.c}!reg\_delete@{reg\_delete}}
+\index{reg\_delete@{reg\_delete}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{reg\_delete()}{reg\_delete()}}
+{\footnotesize\ttfamily void reg\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue__pid}{queue\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{first,  }\item[{int}]{target }\end{DoxyParamCaption})}
+
+
+
+Delete a target \doxylink{structqueue__pid}{queue\+\_\+pid} item from the pid\textquotesingle{}s queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Global pointer to the first element \\
+\hline
+{\em target} & target PID of the element that has to be dequeued. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ipc-so_8c_a5713835c8b1b870ff6a020087d6af224}\label{ipc-so_8c_a5713835c8b1b870ff6a020087d6af224} 
+\index{ipc-\/so.c@{ipc-\/so.c}!reg\_init@{reg\_init}}
+\index{reg\_init@{reg\_init}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{reg\_init()}{reg\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structqueue__pid}{queue\+\_\+pid}} \texorpdfstring{$\ast$}{*} reg\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Initialize a new node of type \doxylink{structqueue__pid}{queue\+\_\+pid}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & PID correlated to a new process subscribed to IPC-\/\+SO \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ERR\+\_\+\+PTR(-\/EFAULT), If kmalloc returns a NULL pointer, 
+
+ttp, Valid pointer to the newly allocated \doxylink{structqueue__pid}{queue\+\_\+pid} structure 
+\end{DoxyReturn}
+\Hypertarget{ipc-so_8c_ae6e524bbc03e36cc38734620cf1cb5b5}\label{ipc-so_8c_ae6e524bbc03e36cc38734620cf1cb5b5} 
+\index{ipc-\/so.c@{ipc-\/so.c}!reg\_insert@{reg\_insert}}
+\index{reg\_insert@{reg\_insert}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{reg\_insert()}{reg\_insert()}}
+{\footnotesize\ttfamily void reg\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue__pid}{queue\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{first,  }\item[{\mbox{\hyperlink{structqueue__pid}{queue\+\_\+pid}} \texorpdfstring{$\ast$}{*}}]{item }\end{DoxyParamCaption})}
+
+
+
+Insert the new item \doxylink{structqueue__pid}{queue\+\_\+pid} into the pid queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Global pointer to the first element \\
+\hline
+{\em item} & New item of type \doxylink{structqueue__pid}{queue\+\_\+pid} ready to be enqueued into the pid\textquotesingle{}s queue. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ipc-so_8c_a708813146638114464c3c26e956d5046}\label{ipc-so_8c_a708813146638114464c3c26e956d5046} 
+\index{ipc-\/so.c@{ipc-\/so.c}!reg\_search@{reg\_search}}
+\index{reg\_search@{reg\_search}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{reg\_search()}{reg\_search()}}
+{\footnotesize\ttfamily int reg\+\_\+search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue__pid}{queue\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{first,  }\item[{int}]{val }\end{DoxyParamCaption})}
+
+
+
+Search a specific PID into the pid\textquotesingle{}s queue, used to discriminate between registration and unregistration operations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Global pointer to the first element \\
+\hline
+{\em val} & identifier of the target PID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0, The value is not found into the pid\textquotesingle{}s queue =\texorpdfstring{$>$}{>} registration 
+
+1, The value is found into the pid\textquotesingle{}s queue =\texorpdfstring{$>$}{>} unregistration 
+\end{DoxyReturn}
+\Hypertarget{ipc-so_8c_ab67cfb4f05d8eebe7f7abdfd76f4549d}\label{ipc-so_8c_ab67cfb4f05d8eebe7f7abdfd76f4549d} 
+\index{ipc-\/so.c@{ipc-\/so.c}!registration\_open@{registration\_open}}
+\index{registration\_open@{registration\_open}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{registration\_open()}{registration\_open()}}
+{\footnotesize\ttfamily static int registration\+\_\+open (\begin{DoxyParamCaption}\item[{struct inode \texorpdfstring{$\ast$}{*}}]{inode,  }\item[{struct file \texorpdfstring{$\ast$}{*}}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{ipc-so_8c_a9f2cb06dd03571ef3abc401f73f53a71}\label{ipc-so_8c_a9f2cb06dd03571ef3abc401f73f53a71} 
+\index{ipc-\/so.c@{ipc-\/so.c}!registration\_read@{registration\_read}}
+\index{registration\_read@{registration\_read}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{registration\_read()}{registration\_read()}}
+{\footnotesize\ttfamily static ssize\+\_\+t registration\+\_\+read (\begin{DoxyParamCaption}\item[{struct file \texorpdfstring{$\ast$}{*}}]{file,  }\item[{char \+\_\+\+\_\+user \texorpdfstring{$\ast$}{*}}]{user\+\_\+buf,  }\item[{size\+\_\+t}]{size,  }\item[{loff\+\_\+t \texorpdfstring{$\ast$}{*}}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{ipc-so_8c_ae7663312a5487377adad4944fadb452c}\label{ipc-so_8c_ae7663312a5487377adad4944fadb452c} 
+\index{ipc-\/so.c@{ipc-\/so.c}!registration\_release@{registration\_release}}
+\index{registration\_release@{registration\_release}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{registration\_release()}{registration\_release()}}
+{\footnotesize\ttfamily static int registration\+\_\+release (\begin{DoxyParamCaption}\item[{struct inode \texorpdfstring{$\ast$}{*}}]{inode,  }\item[{struct file \texorpdfstring{$\ast$}{*}}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{ipc-so_8c_a8b44eb9b13f6192d666c26ebf88323de}\label{ipc-so_8c_a8b44eb9b13f6192d666c26ebf88323de} 
+\index{ipc-\/so.c@{ipc-\/so.c}!registration\_write@{registration\_write}}
+\index{registration\_write@{registration\_write}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{registration\_write()}{registration\_write()}}
+{\footnotesize\ttfamily static ssize\+\_\+t registration\+\_\+write (\begin{DoxyParamCaption}\item[{struct file \texorpdfstring{$\ast$}{*}}]{file,  }\item[{const char \+\_\+\+\_\+user \texorpdfstring{$\ast$}{*}}]{user\+\_\+buf,  }\item[{size\+\_\+t}]{size,  }\item[{loff\+\_\+t \texorpdfstring{$\ast$}{*}}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{ipc-so_8c_aaed2f3c96c59d86d2320c1fdfd28f16a}\label{ipc-so_8c_aaed2f3c96c59d86d2320c1fdfd28f16a} 
+\index{ipc-\/so.c@{ipc-\/so.c}!shared\_memory\_open@{shared\_memory\_open}}
+\index{shared\_memory\_open@{shared\_memory\_open}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{shared\_memory\_open()}{shared\_memory\_open()}}
+{\footnotesize\ttfamily static int shared\+\_\+memory\+\_\+open (\begin{DoxyParamCaption}\item[{struct inode \texorpdfstring{$\ast$}{*}}]{inode,  }\item[{struct file \texorpdfstring{$\ast$}{*}}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{ipc-so_8c_a0bad5473f34de5f9ebf5f5d704d3865f}\label{ipc-so_8c_a0bad5473f34de5f9ebf5f5d704d3865f} 
+\index{ipc-\/so.c@{ipc-\/so.c}!shared\_memory\_read@{shared\_memory\_read}}
+\index{shared\_memory\_read@{shared\_memory\_read}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{shared\_memory\_read()}{shared\_memory\_read()}}
+{\footnotesize\ttfamily static ssize\+\_\+t shared\+\_\+memory\+\_\+read (\begin{DoxyParamCaption}\item[{struct file \texorpdfstring{$\ast$}{*}}]{file,  }\item[{char \+\_\+\+\_\+user \texorpdfstring{$\ast$}{*}}]{user\+\_\+buf,  }\item[{size\+\_\+t}]{size,  }\item[{loff\+\_\+t \texorpdfstring{$\ast$}{*}}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{ipc-so_8c_af2d44066b03654f9094624e192152ac8}\label{ipc-so_8c_af2d44066b03654f9094624e192152ac8} 
+\index{ipc-\/so.c@{ipc-\/so.c}!shared\_memory\_release@{shared\_memory\_release}}
+\index{shared\_memory\_release@{shared\_memory\_release}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{shared\_memory\_release()}{shared\_memory\_release()}}
+{\footnotesize\ttfamily static int shared\+\_\+memory\+\_\+release (\begin{DoxyParamCaption}\item[{struct inode \texorpdfstring{$\ast$}{*}}]{inode,  }\item[{struct file \texorpdfstring{$\ast$}{*}}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{ipc-so_8c_ab4a4b757872abc5edf2c21af9dcb2cfd}\label{ipc-so_8c_ab4a4b757872abc5edf2c21af9dcb2cfd} 
+\index{ipc-\/so.c@{ipc-\/so.c}!shared\_memory\_write@{shared\_memory\_write}}
+\index{shared\_memory\_write@{shared\_memory\_write}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{shared\_memory\_write()}{shared\_memory\_write()}}
+{\footnotesize\ttfamily static ssize\+\_\+t shared\+\_\+memory\+\_\+write (\begin{DoxyParamCaption}\item[{struct file \texorpdfstring{$\ast$}{*}}]{file,  }\item[{const char \+\_\+\+\_\+user \texorpdfstring{$\ast$}{*}}]{user\+\_\+buf,  }\item[{size\+\_\+t}]{size,  }\item[{loff\+\_\+t \texorpdfstring{$\ast$}{*}}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{ipc-so_8c_a562571457bed60513c1a385b1c34d9f2}\label{ipc-so_8c_a562571457bed60513c1a385b1c34d9f2} 
+\index{ipc-\/so.c@{ipc-\/so.c}!sync\_deinit@{sync\_deinit}}
+\index{sync\_deinit@{sync\_deinit}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{sync\_deinit()}{sync\_deinit()}}
+{\footnotesize\ttfamily void sync\+\_\+deinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{first\+\_\+sync }\end{DoxyParamCaption})}
+
+
+
+Deinit the entire pid\textquotesingle{}s queue and free the memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+\_\+sync} & Global pointer to the first element \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ipc-so_8c_acef7eb35b6bef9295e66daf9cced44c3}\label{ipc-so_8c_acef7eb35b6bef9295e66daf9cced44c3} 
+\index{ipc-\/so.c@{ipc-\/so.c}!sync\_delete@{sync\_delete}}
+\index{sync\_delete@{sync\_delete}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{sync\_delete()}{sync\_delete()}}
+{\footnotesize\ttfamily void sync\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{first\+\_\+sync,  }\item[{int}]{target }\end{DoxyParamCaption})}
+
+
+
+Delete a target \doxylink{structsync__pid}{sync\+\_\+pid} item from the sync queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+\_\+sync} & Global pointer to the first element \\
+\hline
+{\em target} & target PID of the element that has to be dequeued. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ipc-so_8c_a1d1cbb803b4d5fb8ebc9ba474f3d674f}\label{ipc-so_8c_a1d1cbb803b4d5fb8ebc9ba474f3d674f} 
+\index{ipc-\/so.c@{ipc-\/so.c}!sync\_init@{sync\_init}}
+\index{sync\_init@{sync\_init}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{sync\_init()}{sync\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*} sync\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Initialize a new node of type \doxylink{structsync__pid}{sync\+\_\+pid}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & It\textquotesingle{}s the PID of the process \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ERR\+\_\+\+PTR(-\/EFAULT), If kmalloc returns a NULL pointer, 
+
+ttp, Valid pointer to the newly allocated \doxylink{structqueue__pid}{queue\+\_\+pid} structure 
+\end{DoxyReturn}
+\Hypertarget{ipc-so_8c_afd2a7c48e123899e5a2605fb64589641}\label{ipc-so_8c_afd2a7c48e123899e5a2605fb64589641} 
+\index{ipc-\/so.c@{ipc-\/so.c}!sync\_insert@{sync\_insert}}
+\index{sync\_insert@{sync\_insert}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{sync\_insert()}{sync\_insert()}}
+{\footnotesize\ttfamily void sync\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{first\+\_\+sync,  }\item[{\mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*}}]{item }\end{DoxyParamCaption})}
+
+
+
+Insert the new item \doxylink{structsync__pid}{sync\+\_\+pid} into the sync queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+\_\+sync} & Global pointer to the first element \\
+\hline
+{\em item} & New item of type \doxylink{structsync__pid}{sync\+\_\+pid} ready to be enqueued into the pid\textquotesingle{}s queue. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ipc-so_8c_ad048d0a8c1ce53eca41afd90dadbd971}\label{ipc-so_8c_ad048d0a8c1ce53eca41afd90dadbd971} 
+\index{ipc-\/so.c@{ipc-\/so.c}!sync\_mes\_find@{sync\_mes\_find}}
+\index{sync\_mes\_find@{sync\_mes\_find}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{sync\_mes\_find()}{sync\_mes\_find()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structchange_data}{change\+Data}} sync\+\_\+mes\+\_\+find (\begin{DoxyParamCaption}\item[{int}]{target\+\_\+pid }\end{DoxyParamCaption})}
+
+
+
+Compares different messages with the target pid and return the one with the minimum delay. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+pid} & represents the target PID for which we want to find the delay-\/related data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structchange_data}{change\+Data}, structure of type \doxylink{structchange_data}{change\+Data} 
+\end{DoxyReturn}
+\Hypertarget{ipc-so_8c_ac02669a3e6a7b041de86d13b262b11c0}\label{ipc-so_8c_ac02669a3e6a7b041de86d13b262b11c0} 
+\index{ipc-\/so.c@{ipc-\/so.c}!sync\_mes\_find\_check@{sync\_mes\_find\_check}}
+\index{sync\_mes\_find\_check@{sync\_mes\_find\_check}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{sync\_mes\_find\_check()}{sync\_mes\_find\_check()}}
+{\footnotesize\ttfamily int sync\+\_\+mes\+\_\+find\+\_\+check (\begin{DoxyParamCaption}\item[{int}]{var }\end{DoxyParamCaption})}
+
+
+
+Determine whether there are messages in the priority queues with a specific target PID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & Represents the target PID that we want to check for in the messages \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0, if any messages were not found 
+
+1, if any messages were found 
+\end{DoxyReturn}
+\Hypertarget{ipc-so_8c_acdc1e45eb5cfd8485b3c262a7e3b9f5b}\label{ipc-so_8c_acdc1e45eb5cfd8485b3c262a7e3b9f5b} 
+\index{ipc-\/so.c@{ipc-\/so.c}!sync\_search@{sync\_search}}
+\index{sync\_search@{sync\_search}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{sync\_search()}{sync\_search()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*} sync\+\_\+search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsync__pid}{sync\+\_\+pid}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{first\+\_\+sync,  }\item[{int}]{val }\end{DoxyParamCaption})}
+
+
+
+Scan the sync queue and determinate if a target PID is in it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+\_\+sync} & Global pointer to the first element \\
+\hline
+{\em val} & Target PID value for the research \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+found, \doxylink{structsync__pid}{sync\+\_\+pid} structure with the matching PID if found 
+
+NULL, no \doxylink{structsync__pid}{sync\+\_\+pid} structure with the given PID was found in the queue 
+\end{DoxyReturn}
+\Hypertarget{ipc-so_8c_a666979f5a8bc2bbb596fcc758d06aa21}\label{ipc-so_8c_a666979f5a8bc2bbb596fcc758d06aa21} 
+\index{ipc-\/so.c@{ipc-\/so.c}!synchronous\_open@{synchronous\_open}}
+\index{synchronous\_open@{synchronous\_open}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{synchronous\_open()}{synchronous\_open()}}
+{\footnotesize\ttfamily static int synchronous\+\_\+open (\begin{DoxyParamCaption}\item[{struct inode \texorpdfstring{$\ast$}{*}}]{inode,  }\item[{struct file \texorpdfstring{$\ast$}{*}}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{ipc-so_8c_a5fe387e965cac5ca7d79a3ad8b2391ad}\label{ipc-so_8c_a5fe387e965cac5ca7d79a3ad8b2391ad} 
+\index{ipc-\/so.c@{ipc-\/so.c}!synchronous\_read@{synchronous\_read}}
+\index{synchronous\_read@{synchronous\_read}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{synchronous\_read()}{synchronous\_read()}}
+{\footnotesize\ttfamily static ssize\+\_\+t synchronous\+\_\+read (\begin{DoxyParamCaption}\item[{struct file \texorpdfstring{$\ast$}{*}}]{file,  }\item[{char \+\_\+\+\_\+user \texorpdfstring{$\ast$}{*}}]{user\+\_\+buf,  }\item[{size\+\_\+t}]{size,  }\item[{loff\+\_\+t \texorpdfstring{$\ast$}{*}}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{ipc-so_8c_afbfdcda74ec07f43136c3ce5e471e4b7}\label{ipc-so_8c_afbfdcda74ec07f43136c3ce5e471e4b7} 
+\index{ipc-\/so.c@{ipc-\/so.c}!synchronous\_release@{synchronous\_release}}
+\index{synchronous\_release@{synchronous\_release}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{synchronous\_release()}{synchronous\_release()}}
+{\footnotesize\ttfamily static int synchronous\+\_\+release (\begin{DoxyParamCaption}\item[{struct inode \texorpdfstring{$\ast$}{*}}]{inode,  }\item[{struct file \texorpdfstring{$\ast$}{*}}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{ipc-so_8c_a93aad87a88ebbec592c72cf169f30529}\label{ipc-so_8c_a93aad87a88ebbec592c72cf169f30529} 
+\index{ipc-\/so.c@{ipc-\/so.c}!synchronous\_write@{synchronous\_write}}
+\index{synchronous\_write@{synchronous\_write}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{synchronous\_write()}{synchronous\_write()}}
+{\footnotesize\ttfamily static ssize\+\_\+t synchronous\+\_\+write (\begin{DoxyParamCaption}\item[{struct file \texorpdfstring{$\ast$}{*}}]{file,  }\item[{const char \+\_\+\+\_\+user \texorpdfstring{$\ast$}{*}}]{user\+\_\+buf,  }\item[{size\+\_\+t}]{size,  }\item[{loff\+\_\+t \texorpdfstring{$\ast$}{*}}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{ipc-so_8c_a28ee7ed9613033920e733c9da671f79c}\label{ipc-so_8c_a28ee7ed9613033920e733c9da671f79c} 
+\index{ipc-\/so.c@{ipc-\/so.c}!fops@{fops}}
+\index{fops@{fops}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{fops}{fops}}
+{\footnotesize\ttfamily struct file\+\_\+operations fops\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .owner\ =\ THIS\_MODULE,}
+\DoxyCodeLine{\ \ \ \ .open\ =\ \mbox{\hyperlink{ipc-so_8c_ab67cfb4f05d8eebe7f7abdfd76f4549d}{registration\_open}},}
+\DoxyCodeLine{\ \ \ \ .release\ =\ \mbox{\hyperlink{ipc-so_8c_ae7663312a5487377adad4944fadb452c}{registration\_release}},}
+\DoxyCodeLine{\ \ \ \ .read\ =\ \mbox{\hyperlink{ipc-so_8c_a9f2cb06dd03571ef3abc401f73f53a71}{registration\_read}},}
+\DoxyCodeLine{\ \ \ \ .write\ =\ \mbox{\hyperlink{ipc-so_8c_a8b44eb9b13f6192d666c26ebf88323de}{registration\_write}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{ipc-so_8c_a761da16d0a8f351326431a6182473eae}\label{ipc-so_8c_a761da16d0a8f351326431a6182473eae} 
+\index{ipc-\/so.c@{ipc-\/so.c}!fops\_sm@{fops\_sm}}
+\index{fops\_sm@{fops\_sm}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{fops\_sm}{fops\_sm}}
+{\footnotesize\ttfamily struct file\+\_\+operations fops\+\_\+sm\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .owner\ =\ THIS\_MODULE,}
+\DoxyCodeLine{\ \ \ \ .open\ =\ \mbox{\hyperlink{ipc-so_8c_aaed2f3c96c59d86d2320c1fdfd28f16a}{shared\_memory\_open}},}
+\DoxyCodeLine{\ \ \ \ .release\ =\ \mbox{\hyperlink{ipc-so_8c_af2d44066b03654f9094624e192152ac8}{shared\_memory\_release}},}
+\DoxyCodeLine{\ \ \ \ .read\ =\ \mbox{\hyperlink{ipc-so_8c_a0bad5473f34de5f9ebf5f5d704d3865f}{shared\_memory\_read}},}
+\DoxyCodeLine{\ \ \ \ .write\ =\ \mbox{\hyperlink{ipc-so_8c_ab4a4b757872abc5edf2c21af9dcb2cfd}{shared\_memory\_write}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{ipc-so_8c_a9c559d18fea2a4dd21a7df3a7f3c3c0e}\label{ipc-so_8c_a9c559d18fea2a4dd21a7df3a7f3c3c0e} 
+\index{ipc-\/so.c@{ipc-\/so.c}!fops\_sync@{fops\_sync}}
+\index{fops\_sync@{fops\_sync}!ipc-\/so.c@{ipc-\/so.c}}
+\doxysubsubsection{\texorpdfstring{fops\_sync}{fops\_sync}}
+{\footnotesize\ttfamily struct file\+\_\+operations fops\+\_\+sync\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .owner\ =\ THIS\_MODULE,}
+\DoxyCodeLine{\ \ \ \ .open\ =\ \mbox{\hyperlink{ipc-so_8c_a666979f5a8bc2bbb596fcc758d06aa21}{synchronous\_open}},}
+\DoxyCodeLine{\ \ \ \ .release\ =\ \mbox{\hyperlink{ipc-so_8c_afbfdcda74ec07f43136c3ce5e471e4b7}{synchronous\_release}},}
+\DoxyCodeLine{\ \ \ \ .read\ =\ \mbox{\hyperlink{ipc-so_8c_a5fe387e965cac5ca7d79a3ad8b2391ad}{synchronous\_read}},}
+\DoxyCodeLine{\ \ \ \ .write\ =\ \mbox{\hyperlink{ipc-so_8c_a93aad87a88ebbec592c72cf169f30529}{synchronous\_write}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

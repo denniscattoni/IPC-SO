@@ -1,0 +1,48 @@
+\doxysection{USER\+\_\+\+PROCESS.\+h}
+\hypertarget{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_source}{}\label{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h_source}\index{/home/dennis/Scrivania/doxy\_backend/user\_vecchio/USER\_PROCESS.h@{/home/dennis/Scrivania/doxy\_backend/user\_vecchio/USER\_PROCESS.h}}
+\mbox{\hyperlink{user__vecchio_2_u_s_e_r___p_r_o_c_e_s_s_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ USER\_PROCESS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ USER\_PROCESS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//Libraries}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <fcntl.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <stdint.h>}\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//Type\ definition}}
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_message}{Message}}\{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_message_a860d927c064ca3ee4d60fac8b931df17}{pid\_recipient}};\ \ \ \ \textcolor{comment}{//recipient's\ PID\ \ \ \ }}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_message_ade1f27fb8df631124108c0a3d67fefb2}{pid\_sender}};\ \ \ \ \ \ \ \textcolor{comment}{//sender's\ PID\ }}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_message_ad16455c5b24b2b45b47ca36b5c69fd1f}{priority}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//priority\ of\ the\ message}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_message_a2febba60c22345a9753950a37c0525e4}{delay}};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//delay\ of\ the\ message}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_message_a239e9c3964983aa620d07817a6ac3447}{payload}}[128];\ \ \ \ \textcolor{comment}{//payload\ in\ bytes}}
+\DoxyCodeLine{00021\ \}\ \mbox{\hyperlink{user_2_u_s_e_r___p_r_o_c_e_s_s_8h_a82fffef6ac8d8a796ab35b7d6a7a0dcb}{Message}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//Constant\ definition}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ REGISTRATION\_DEVICE\ "{}/dev/registration"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ SHARED\_MEM\_DEVICE\ "{}/dev/shared\_memory"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ SYNCHRONOUS\_DEVICE\ "{}/dev/synchronous"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ BUFFER\_SIZE\ 1024}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ MAX\_REGISTRATIONS\ 100}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//Function\ declaration}}
+\DoxyCodeLine{00033\ \mbox{\hyperlink{struct_message}{Message}}\ *\mbox{\hyperlink{user_2_u_s_e_r___p_r_o_c_e_s_s_8h_aca47a6bece065be3625c6375ffb58231}{newMessage}}();}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{user_2_u_s_e_r___p_r_o_c_e_s_s_8h_a733f0d29f21aa6bb97cdfebf04024ba2}{myRandom}}(\textcolor{keywordtype}{int}\ min,\ \textcolor{keywordtype}{int}\ max);}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{user__vecchio_2user__process_8c_a125463cae524be2ca9eaa8ee1b87c6a8}{mymenu}}();}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{user__vecchio_2user__process_8c_a4590adac7e906e93cb13d50ebf1ac9cb}{reg\_unreg}}();}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{user_2_u_s_e_r___p_r_o_c_e_s_s_8h_a302e52cb142c74f1aa27922946a56ccb}{process\_avaiable}}();}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{user_2_u_s_e_r___p_r_o_c_e_s_s_8h_aaeba3938a41d7a3a40a8486759c64d74}{mes\_write}}();}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{user_2_u_s_e_r___p_r_o_c_e_s_s_8h_ab4cb2d1a4a1ac5c32a64ba593f0a323a}{mes\_read}}();}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{user_2_u_s_e_r___p_r_o_c_e_s_s_8h_ad904e37250031819ab322a910af4bda6}{mes\_read\_sync}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
