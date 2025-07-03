@@ -15,8 +15,12 @@ Open [**Requirements and Constraints**](https://github.com/denniscattoni/tmp_so/
 
 Refer to the following report: [**Report_IPC-SO.pdf**](https://github.com/denniscattoni/IPC-SO/blob/master/utilities/report/Report_IPC-SO.pdf), for more details on the architecture, limitations, and structure of the project.
 <br><br>
+# IPC-SO Wallpaper
 
-![Alt text](https://github.com/denniscattoni/tmp_so/blob/main/utilities/img/ipc-so-high-wallpaper.png)
+Ecco il wallpaper usato per il progetto:
+
+![IPC-SO Wallpaper](https://raw.githubusercontent.com/denniscattoni/tmp_so/main/utilities/img/ipc-so-high-wallpaper.png)
+
 
 <br>
 
