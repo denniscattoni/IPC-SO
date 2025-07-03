@@ -19,8 +19,7 @@ Refer to the following report: [**Report_IPC-SO.pdf**](https://github.com/dennis
 
 Ecco il wallpaper usato per il progetto:
 
-![IPC-SO Wallpaper](https://raw.githubusercontent.com/denniscattoni/tmp_so/main/utilities/img/ipc-so-high-wallpaper.png)
-
+![Alt text](https://github.com/denniscattoni/tmp_so/blob/master/utilities/img/ipc-so-high-wallpaper.png)
 
 <br>
 
