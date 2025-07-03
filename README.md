@@ -15,11 +15,7 @@ Open [**Requirements and Constraints**](https://github.com/denniscattoni/tmp_so/
 
 Refer to the following report: [**Report_IPC-SO.pdf**](https://github.com/denniscattoni/IPC-SO/blob/master/utilities/report/Report_IPC-SO.pdf), for more details on the architecture, limitations, and structure of the project.
 <br><br>
-# IPC-SO Wallpaper
-
-Ecco il wallpaper usato per il progetto:
-
-![Alt text](https://github.com/denniscattoni/tmp_so/blob/master/utilities/img/ipc-so-high-wallpaper.png)
+<img alt="" src="utilities/img/ipc-so-high-wallpaper.png" width="100%"><br>
 
 <br>
 
@@ -210,7 +206,7 @@ This is an example of the user interface to interact with the module:
 
 <br>
 
-![Alt text](https://github.com/denniscattoni/tmp_so/blob/main/utilities/img/ipcso_interface.png)
+<img alt="" src="utilities/img/ipcso_interface.png" width="100%"><br>
 
 <br>
 
@@ -231,7 +227,8 @@ After performing the *_unregister_* operation, the interface allows the user to 
 <br>
 <br>
 
-![Alt text](https://github.com/denniscattoni/tmp_so/blob/main/utilities/img/ipcso_unreg_interface.png)
+<img alt="" src="utilities/img/ipcso_unreg_interface.png" width="100%"><br>
+
 
 <br>
 <br>
@@ -321,13 +318,13 @@ This playlist was useful to show a trivial example of "Hello World" with a Kerne
 # Credits
 
 * Alex Cattoni - Università degli studi di Trento (Unitn), Trento – Italy
-  <br> alex.cattoni@studenti.unitn.it
+  <br> 📨 alex.cattoni@studenti.unitn.it
 
 * Dennis Cattoni - Università degli studi di Trento (Unitn), Trento – Italy
-  <br> dennis.cattoni@studenti.unitn.it
+  <br> 📨 dennis.cattoni@studenti.unitn.it
 
 * Manuel Vettori - Università degli studi di Trento (Unitn), Trento – Italy
-  <br> manuel.vettori@studenti.unitn.it
+  <br> 📨 manuel.vettori@studenti.unitn.it
 
 
 
