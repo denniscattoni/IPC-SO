@@ -10,7 +10,7 @@ This repository contains all the sources created for the laboratory's project du
 The purpose of the project was to create a new mechanism for inter-process communication without using the existing ones.
 <br>
 
-Open [**Requirements and Constraints**](https://github.com/denniscattoni/tmp_so/blob/main/utilities/requirements/LabOS2023_Progetto_desame.pdf) to access more details about the project's constraints and requirements.
+Open [**Requirements and Constraints**](https://github.com/denniscattoni/IPC-SO/blob/master/utilities/requirements/LabOS2023_Progetto_desame.pdf) to access more details about the project's constraints and requirements.
 <br><br>
 
 Refer to the following report: [**Report_IPC-SO.pdf**](https://github.com/denniscattoni/IPC-SO/blob/master/utilities/report/Report_IPC-SO.pdf), for more details on the architecture, limitations, and structure of the project.
